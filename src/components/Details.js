@@ -1,18 +1,33 @@
 import React from 'react';
-import {Link, useLocation} from 'react-router-dom'
+// import {Link, useLocation, useParams} from 'react-router-dom'
+import {Link} from 'react-router-dom'
 import Table from './Table';
 
-function useQuery() {
+
+
+/* function useQuery() {
     return new URLSearchParams(useLocation().search);
-  }
+  } */
 
 function Details(props) {
 
-    let query = useQuery()
+    /*     let {title} = useParams()
+    let {year} = useParams()
+    console.log("perURL: title:"+title+", year:"+year) */
+
+    let title = props.match.params.title
+    let year = props.match.params.year
+
+    /*let query = useQuery()
 
     let detailData = [{
         title: query.get("title"),
         year: query.get("year")
+    }] */
+    
+    let detailData = [{
+        title: title,
+        year: year
     }]
 
     return (

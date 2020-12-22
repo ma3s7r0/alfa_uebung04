@@ -1,5 +1,5 @@
 import './App.css';
-import {BrowserRouter, Route} from 'react-router-dom'
+import {BrowserRouter, Route, Switch} from 'react-router-dom'
 import Table from './components/Table';
 import Details from './components/Details';
 
@@ -28,7 +28,7 @@ function App() {
       <BrowserRouter>
         <h1>Music</h1>
         <Route path="/" exact component={() => <Table data={alben} headers={["Titel"]} properties={["title"]} linkProperties={["title", "year"]} />} />
-        <Route path="/details" component={Details}/>
+        <Route path="/details/:title/:year" component={Details}/>
       </BrowserRouter>
   );
 }
