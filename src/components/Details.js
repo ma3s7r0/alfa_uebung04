@@ -17,7 +17,7 @@ function Details(props) {
 
     return (
         <div>
-            <Table data={detailData} headers={["Titel", "Jahr"]} properties={["title", "year"]} addLink=""/>
+            <Table data={detailData} headers={["Titel", "Jahr"]} properties={["title", "year"]} />
             <Link to="/">Zurück zur Startseite</Link>
         </div>
     );

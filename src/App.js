@@ -25,13 +25,11 @@ const alben = 	[
 
 function App() {
   return (
-    <>
       <BrowserRouter>
-      <h1>Music</h1>
-      <Route path="/" exact component={() => <Table data={alben} headers={["Titel"]} properties={["title"]} addLink="true" />} />
-      <Route path="/details" component={Details}/>
+        <h1>Music</h1>
+        <Route path="/" exact component={() => <Table data={alben} headers={["Titel"]} properties={["title"]} linkProperties={["title", "year"]} />} />
+        <Route path="/details" component={Details}/>
       </BrowserRouter>
-    </>
   );
 }
 
